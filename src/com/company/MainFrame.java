@@ -45,8 +45,9 @@ public class MainFrame extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
               if(tf1.getText().equals("poi")&&new String(tf2.getPassword()).equals("123456")){
-                MainFrame2 mf2=new MainFrame2();
+                MainFrame2 mf2=new MainFrame2(MainFrame.this);
                 mf2.setVisible(true);
+                MainFrame.this.setVisible(false);
               } else{
                JOptionPane.showMessageDialog(null,"error");
               }
